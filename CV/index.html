@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Arash Alghasi">
+    <meta name="keywords" content="CV, Curriculum vitae">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./style/main.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/50ca2fef8c.js" crossorigin="anonymous"></script>
+    <title>Curriculum Vitae</title>
+</head>
+
+<body>
+    <section class="fixedMenu">
+        <header>
+            <p>Curriculum<span>Vitae</span></p>
+            <nav>
+                <img src="./images/close.svg" alt="close botton" class="closeBtn" id="closeBtn">
+                <ul>
+                    <li><a class="navSection" href="#hero">About</a></li>
+                    <li><a class="navSection" href="#experience-section">Experience</a></li>
+                    <li><a class="navSection" href="#education-section">Education</a></li>
+                    <li><a class="navSection" href="#skills-section">Skills</a></li>
+                    <li><a class="navSection" href="#contact-section">contact</a></li>
+                </ul>
+            </nav>
+            <!-- night buttom ------------------------------------------------------->
+                <div class="container">
+                    <div class="toggle-btn" id="btn-theme">
+                        <span id="spanTheme">Dark Mode</span>
+                    </div>
+                </div>
+            <!-- end night buttom --------------------------------------------------->
+            <div class="hamburger" id="hamburger">
+                <div class="container">
+                    <svg width="2em" height="2em" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                </div>
+            </div>
+        </header>
+    </section>
+    <section class="hero" id="hero">
+        <div class="left-col">
+            <h1 id="neon">Arash Alghasi</h1>
+            <div class="subhead">
+                <P>Corso Aldo Gastali, Genova</P>
+                <p> arash.alghasi@libero.it</p>
+                <p>I am Arash Alghasi, a graduating student at Genoa University, where I am pursuing my second
+                    Bachelor's degree in Computer Engineering.</br> I am highly interested in embedded systems development, 
+                    which is also the subject of my <a style="color:#000000;" href="https://arashalghasi.github.io/thesisUnige/">THESIS</a>. </br> </br> 
+                    I am available for all types of employment contracts.
+                </p>
+            </div>
+        </div>
+        <div class="right-col">
+            <img class="hero-img"
+                src="./images/one.svg"
+                width="50%"
+                alt="Hero svg">
+        </div>
+    </section>
+
+    <section class="socials">
+        <ul class="wrapper">
+            <li class="icon github">
+              <span class="tooltip">Github</span>
+              <span></span>
+              <span><a href="https://github.com/arashalghasi"><i class="fab fa-github fa-xl"></i></a></span>
+            </li>
+            <li class="icon youtube">
+              <span class="tooltip">linkedin</span>
+              <span><a href="https://www.linkedin.com/in/arash-alghasi-993144295/"><i class="fa-brands fa-linkedin fa-xl"></i></a></span>
+            </li>
+          </ul>
+    </section>
+
+    <section class="experience-section" id="experience-section">
+        <h1>Experiences</h1>
+        <div class="work">
+            <h2>Software Engineer intern</h2>
+            <h3> <a style="color:#fbfbfb;" href="https://www.segulatechnologies.com/en/">SEGULA TECHNOLOGIES</a> </h3>
+            <h4> 09/2024 - ongoing </h4>
+            <p>PLC Programming <br> Structured text language IEC 16131-3<br> TCN, Ethernet , MVB, WTB</p>
+        </div>
+        <div class="work">
+            <h2>Back End Developer</h2>
+            <h3> <a style="color:#fbfbfb;" href="https://anthillgroup.it/">ANTHILL S.R.L</a> </h3>
+            <h4> 01/2024 - 07/2024 </h4>
+            <p>Flask/Python, PostgreSQL, Spring Boot, Java 17<br> Spring Data JPA, Hibernate, JDBC, MVC architecture<br> Virtualization (Docker), REST/HTTP architecture</p>
+        </div>
+        <div class="work">
+            <h2>.NET full Stack developer intern</h2>
+            <h3> <a style="color:#fbfbfb;" href="https://www.vargroup.com/">VAR GROUP S.P.A.</a> </h3>
+            <h4> 04/2023 - 10/2023 </h4>
+            <p>Data collection, Web scraping, Data cleaning, Database operations, .NET console application, JSON
+                Git/Github</p>
+        </div>
+    </section>
+    <section class="education-section" id="education-section">
+        <h1>education</h1>
+        <div class="education">
+            <h2>Bachelor's Degree in Computer Engineering</h2>
+            <h3>Genoa University, Italy</h3>
+            <h4> Ongoing </h4>
+        </div>
+        <div class="education">
+            <h2>Exchange Student</h2>
+            <h3>Universidade da Coruña, Spain</h3>
+            <h4> 10/2022 - 02/2023 </h4>
+            <p>I've had the wonderful opportunity to learn about the amazing people of Spain, their language, and their culture</p>
+        </div>
+        <div class="education">
+            <h2>Bachelor's Degree in Mining Engineering</h2>
+            <h3>Universita' della Tecnologia di Hamedan, Iran</h3>
+            <h4> 10/2013 - 10/2017 </h4>
+            <p>thesis: "Innovations in Flotation Technology"<br>
+                GPA: 15/20</p>
+        </div>
+    </section>
+    <section class="skills-section" id="skills-section">
+        <div>
+            <h2>Skills</h2>
+        </div>
+        <div id="Professionl-Skill">
+            <p> 
+                C Embedded, C++, JAVA, Python, SQL, Structured text, Kotlin, HTML/CSS/JS </br>
+                Spring Data, STM32 HAL, Flask, Streamlit </br>
+                Git/Github, PostgreSQL, Matlab/Simulik, UNREAL ENGINE, Microsoft Word, AutoCAD, Studio NPVSbr </br>
+                LPIC-1, CCNA, IOT, Electronic, DevOps, Bash Scripting
+            </p>
+        </div>
+    </section>
+    <section class="contact-section" id="contact-section">
+        <div class="contact-left">
+            <h2>contact</h2>
+            <label for="name">Reason: </label>
+            <input type="text" name="name" id="name" placeholder="Your Name:">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Your Email">
+            <label for="message">Message: </label>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Please Write here ..."></textarea>
+            <input type="submit" class="send-message-cta" value="Send Message" id="send-message">
+        </div>
+        <!-- <div class="contact-right">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d669765.9057273518!2d8.99818143014828!3d44.34969508098379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d343b8ac87ae9d%3A0x807119e998a81d54!2sStudio%20Immobiliare%20Longo%20Di%20Longo%20Nicola!5e0!3m2!1sen!2sit!4v1686488792785!5m2!1sen!2sit"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> -->
+        <div id="contact-result" class="contact-result">
+        </div>
+    </section>
+    <section id="cookie">
+        <div class="cookie">
+            <p>I use cookie to improve your experience on my site </p>
+            <p>To find out more, read our updated <span>privacy policy</span> and <span>cookie policy</span> .</p>
+            <input type="button" class="cookieBtn" value="Accept" id="cookieBtn">
+        </div>
+    </section>
+    <footer>
+        <!-- ------------------------------------------------------------------- -->
+        <div class="header">
+            <div class="inner-header flex">
+                <h1>Be Positive. Be Kind. Be Optimistic</h1>
+            </div>
+            <!--  bubble start-->
+            
+            <!-- Bubble end -->
+
+            <!--Waves Container-->
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                    </g>
+                </svg>
+            </div>
+
+        </div>
+        <!--Header ends-->
+        <!-- ------------------------------------------------------------------- -->
+        <p> 2023 Arash Alghasi</p>
+    </footer>
+    <script>
+        
+        const themeBtn = document.getElementById('btn-theme');
+        const cookieBtn = document.getElementById('cookieBtn');
+        const cookieQuery = document.getElementById('cookie');
+        const menuBtn = document.getElementById('hamburger');
+        const closeBtn = document.getElementById('closeBtn');
+        const closeScreen = document.getElementsByClassName('navSection');
+        const MenuQuery = document.querySelector('nav');
+        const contactbtn = document.getElementById('send-message');
+        const contactResult = document.getElementById('contact-result');
+        const constactResultText = document.createElement('p');
+        const themeText = document.getElementById('spanTheme');
+
+        // --------------------- Dark mode ---------------------
+        themeBtn.style.backgroundColor = '#000000';
+        themeBtn.style.boxShadow = '0 0 10px  #f9f9f9, 0 0 10px  #ffffff, 0 0 1px  #ffffff';
+        themeBtn.onclick = function(){
+            document.body.classList.toggle('dark-theme');
+             if(themeText.textContent === 'Dark Mode'){
+                themeText.textContent = 'Light Mode';
+                themeBtn.style.backgroundColor = '#ffde00';
+                themeBtn.style.boxShadow = '0 0 10px  #ffd500, 0 0 10px  #e8f40a, 0 0 10px  #fbff00';
+             }else{
+                themeText.textContent = 'Dark Mode';
+                themeBtn.style.backgroundColor = '#000000';
+                themeBtn.style.boxShadow = '0 0 10px  #f9f9f9, 0 0 10px  #ffffff, 0 0 10px  #ffffff';
+             }
+        }
+        // --------------------- Dark mode ---------------------
+
+        constactResultText.textContent = '';
+
+        contactbtn.addEventListener('click', () => {
+
+
+            fetch("https://formsubmit.co/ajax/arash.alqasi@gmail.com", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: $('input[name="name"]').val(),
+                    email: $('input[name="email"]').val(),
+                    message: $('textarea[name="message"]').val()
+                })
+            })
+                .then(response => response.json())
+                .then(data => constactResultText.textContent = data.message)
+                .catch(error => constactResultText.textContent = error.message);
+
+            contactResult.appendChild(constactResultText);
+            contactResult.classList.remove('contact-result');
+            contactResult.classList.add('contact-result-text');
+
+        });
+
+        cookieBtn.addEventListener('click', () => {
+            cookieQuery.classList.add('cookieclose');
+        });
+
+
+        MenuQuery.addEventListener('click', () => {
+            MenuQuery.classList.remove('openMenu');
+        });
+
+        menuBtn.addEventListener('click', () => {
+            MenuQuery.classList.add('openMenu');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            MenuQuery.classList.remove('openMenu');
+        });
+
+        for (var i = 0; i < closeScreen.length; i++) {
+            closeScreen[i].addEventListener('click', () => {
+                MenuQuery.classList.remove('openMenu');
+            });
+        }
+
+        // 	//Switch light/dark
+	
+	// $("#switch").on('click', function () {
+	// 	if ($("body").hasClass("dark")) {
+	// 		$("body").removeClass("dark");
+	// 		$("#switch").removeClass("switched");
+	// 	}
+	// 	else {
+	// 		$("body").addClass("dark");
+	// 		$("#switch").addClass("switched");
+	// 	}
+	// });  
+	
+
+    </script>
+</body>
+
+</html>
