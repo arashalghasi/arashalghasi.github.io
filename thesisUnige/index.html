@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="A 3D measurement system with a ToF sensor">
-  <meta name="keywords" content="MCU, Depth Estimation, Light-weight ToF Sensor, STM32, NUCLEO_F446RET6, VL53L5CX, ESP8266_01s_ nRF24L01">
+  <meta name="description" content="A 3D measurement system with a ToF sensor">
+  <meta name="keywords"
+    content="MCU, Depth Estimation, Light-weight ToF Sensor, STM32, NUCLEO_F446RET6, VL53L5CX, ESP8266_01s_ nRF24L01">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Depth Estimation Using a ToF Sensor</title>
   <link rel="icon" type="image/x-icon" href="./media/images.jpg">
@@ -14,148 +15,149 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css" />
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <div class="container has-text-centered">
-        <img src="./media/Logo-Unige.png" alt="University Logo" style="width: 30;" >
-      </br>
-        <h1 class="title is-1 publication-title">
-        <span style="color: #e25959"></span>Development of a 
-        <span style="color: #e25959">3D</span> measurement
-        <span style="color: #e25959">system</span>, based on </br>
-        <span style="color: #e25959">Microcontroller</span> and 
-        <span style="color: #e25959">ToF</span> Sensor and its integration in </br>
-        <span style="color: #e25959">Domotics</span> (Under review)
-        </h1>
-      <div class="is-size-5 publication-authors">
-          <!-- Author details go here -->
-      </div>      
-        <div class="is-size-5 publication-authors">
-          <div class="author-block">
-            <span class="author-block">Student: </span>
-            <a href="https://arashalghasi.github.io/CV/">Arash Alghasi</a> 
-          </div>
-        </br>
-          <div class="author-block">
-            <span class="author-block">Supervisor: </span>
-            <a href="https://rubrica.unige.it/personale/VUZBWl9p">Professore Marco Raggio</a> 
-          </div>
-        </br>
-          <div class="author-block">
-            <span class="author-block">Co-supervisor: </span>
-            <a href="https://www.linkedin.com/in/alberto-cabitto-4a72111/">Ingegnere Alberto Cabbito</a>
-          </div>
-        </div>
-      </br>
-        <div class="is-size-5 publication-authors">
-          <!-- * denotes equal contribution <br> -->
-          <span class="author-block">SIMAV Lab of University of Genoa</span>
-        </div>
-      </br>
-        <div class="column has-text-centered">
-          <div class="publication-links">
-            <!-- PDF Link. -->
-            <span class="link-block">
-              <a href="./media/Thesis_V2.pdf"
-                  class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                </span>
-                <span>Thesis</span>
-              </a>
-            </span>
-            <span class="link-block">
-              <!-- github repository -->
-              <a href="https://github.com/arashalghasi/ThesisUnige"
-                 class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                    <i class="fab fa-github"></i>
-                </span>
-                <span>Code (Private for now)</span>
-                </a>
-            </span>
-            <span class="link-block">
-              <a href="https://thesisresutl4762847.streamlit.app/"
-                 class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                    <i class="fa fa-database"></i>
-                </span>
-                <span>Result</span>
-                </a>
-            </span>
-            <span class="link-block">
-              <a href="https://arashalghasi.github.io/CV/"
-                  class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                    <i class="fas fa-file"></i>
-                </span>
-                <span>CV</span>
-              </a>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="has-text-centered" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-        <img style="width: 100%; border-radius: 2em;" src="./media/ProjectPhotoFull2.jpg" 
-             alt="Demonstration of light-weight ToF Sensor result sample"/>
-        <img style="width: 100%; border-radius: 2em;" src="./media/ProjectPhotoFull.jpg" 
-             alt="Demonstration of light-weight ToF Sensor result sample"/>
-    </div>
-    
-    </div>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-      </br>
-        <h2 class="title is-2">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="container has-text-centered">
+          <img src="./media/Logo-Unige.png" alt="University Logo" style="width: 30;">
           </br>
-            This thesis has analyzed the use and potential of a cost-effective and energy-efficient Time-of-Flight sensor 
-            for acquiring three-dimensional data in domestic environments. The work focused on integrating the VL53L5CX 
-            sensor with a generic microcontroller, developing an autonomous system capable of Movement, acquiring and transmitting 
-            information without the use of wired connections.</br></br>
-            The primary goal of this thesis was to develop a system for data acquisition and processing using
-            a Time-of-Flight (ToF) sensor, specifically the VL53L5CX, integrated with an STM32 microcontroller
-            for sensor management and control. The project involved implementing algorithms for data filtering
-            and aggregation and visualizing the results through a dedicated software platform. The solution was
-            tested in various scenarios, with applications robotics, home automation and environmental scanning. </br></br>
-          </p>
+          <h1 class="title is-1 publication-title">
+            <span style="color: #e25959"></span>Development of a
+            <span style="color: #e25959">3D</span> measurement
+            <span style="color: #e25959">system</span>, based on </br>
+            <span style="color: #e25959">Microcontroller</span> and
+            <span style="color: #e25959">ToF</span> Sensor and its integration in </br>
+            <span style="color: #e25959">Domotics</span> (Under review)
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <!-- Author details go here -->
+          </div>
+          <div class="is-size-5 publication-authors">
+            <div class="author-block">
+              <span class="author-block">Student: </span>
+              <a href="https://arashalghasi.github.io/CV/">Arash Alghasi</a>
+            </div>
+            </br>
+            <div class="author-block">
+              <span class="author-block">Supervisor: </span>
+              <a href="https://rubrica.unige.it/personale/VUZBWl9p">Professore Marco Raggio</a>
+            </div>
+            </br>
+            <div class="author-block">
+              <span class="author-block">Co-supervisor: </span>
+              <a href="https://www.linkedin.com/in/alberto-cabitto-4a72111/">Ingegnere Alberto Cabbito</a>
+            </div>
+          </div>
+          </br>
+          <div class="is-size-5 publication-authors">
+            <!-- * denotes equal contribution <br> -->
+            <span class="author-block">SIMAV Lab of University of Genoa</span>
+          </div>
+          </br>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./media/Thesis_V2.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Thesis</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <!-- github repository -->
+                <a href="https://github.com/arashalghasi/ThesisUnige"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Private for now)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://thesisresutl4762847.streamlit.app/"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-database"></i>
+                  </span>
+                  <span>Result</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arashalghasi.github.io/CV/" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file"></i>
+                  </span>
+                  <span>CV</span>
+                </a>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-</section>
+  </section>
 
-<section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="has-text-centered" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+          <img style="width: 100%; border-radius: 2em;" src="./media/ProjectPhotoFull2.jpg"
+            alt="Demonstration of light-weight ToF Sensor result sample" />
+          <img style="width: 100%; border-radius: 2em;" src="./media/ProjectPhotoFull.jpg"
+            alt="Demonstration of light-weight ToF Sensor result sample" />
+        </div>
+
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          </br>
+          <h2 class="title is-2">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              </br>
+              This thesis has analyzed the use and potential of a cost-effective and energy-efficient Time-of-Flight
+              sensor
+              for acquiring three-dimensional data in domestic environments. The work focused on integrating the
+              VL53L5CX
+              sensor with a generic microcontroller, developing an autonomous system capable of Movement, acquiring and
+              transmitting
+              information without the use of wired connections.</br></br>
+              The primary goal of this thesis was to develop a system for data acquisition and processing using
+              a Time-of-Flight (ToF) sensor, specifically the VL53L5CX, integrated with an STM32 microcontroller
+              for sensor management and control. The project involved implementing algorithms for data filtering
+              and aggregation and visualizing the results through a dedicated software platform. The solution was
+              tested in various scenarios, with applications robotics, home automation and environmental scanning.
+              </br></br>
+            </p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- <section>
   <hr/>
   <div class="container is-max-desktop">
    <div class="columns is-centered has-text-centered">
@@ -171,110 +173,138 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
-
-
-<section class="section">
-  <hr/>
-  <div class="container is-max-desktop">
-    <div class="content has-text-justified">
-      <h2 class="title is-3 has-text-centered"><p>What is the light-weight ToF sensor?</p></h2>
-      <div class="has-text-centered">
-        <img style="width: 95%;" src="./media/VL53L5CX_BreakOut_Board.png"
-             alt="Demonstration of the light-weight ToF Sensor"/>
+  <section>
+    <hr />
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-forth-fifths">
+          <h2 class="title is-2">High-Level System Design</h2>
+          <div class="has-text-centered">
+            <img style="width: 95%;" src="./media/System-design.jpg"
+              alt="Demonstration of the light-weight ToF Sensor" />
+          </div>
+        </div>
       </div>
-      <p>
-      </br>
-        Light-weight ToF sensors like VL53L5CX are designed to be low-cost, small, and low-energy, which have been massively
-        deployed on mobile devices for the purposes like autofocus, obstacle detection, etc.
-        Due to the light-weight electronic design, the depth measured by these sensors has more uncertainty
-        (i.e., in a distribution instead of single depth value) and low spatial resolution (e.g., &#8804; 10×10), and
-        thus cannot support applications like 3D reconstruction or SLAM, that require high-fidelity depth.
-      </p>
-      <br/>
-      <br/>
-      <div class="has-text-centered">
-        <img style="width: 95%;" src="./media/principle.png"
-             alt="Demonstration of the light-weight ToF Sensor mechanism"/>
-      </div>
-      <p>
-      </br>
-        Let's use the VL53L5CX as an example to explain the sensing principle of the light-weight ToF sensor.
-        For conventional ToF sensors, the output is typically in a resolution higher than 10 thousand pixels
-        and measures the per-pixel distance along the ray from the optical center to the observed surfaces.
-        In contrast, VL53L5CX (denoted as L5) provides <strong>multiple depth distributions</strong> with an extremely low resolution of 8 × 8 zones,
-        covering 63&#176; diagonal FoV in total. The distribution is originally measured by counting the number of
-        photons returned in each discretized range of time, and then fitted with a Gaussian distribution
-        in order to reduce the broadband load and energy consumption since only mean and variance
-        needs to be transmitted.
-      </p>
     </div>
-  </div>
-  <br/>
-</section>
+  </section>
 
 
-<section class="section">
-  <hr/>
-  <div class="container is-max-desktop">
-    <div class="content has-text-justified">
-      <h2 class="title is-3 has-text-centered"><p>Tof sensor application</p></h2>
-      <div class="has-text-centered">
-        <img style="width: 80%;" src="./media/VL53L5CXApplication.png"
-             alt="Demonstration of light-weight ToF Sensor Applications"/>
+
+  <section class="section">
+    <hr />
+    <div class="container is-max-desktop">
+      <div class="content has-text-justified">
+        <h2 class="title is-3 has-text-centered">
+          <p>What is the light-weight ToF sensor?</p>
+        </h2>
+        <div class="has-text-centered">
+          <img style="width: 95%;" src="./media/VL53L5CX_BreakOut_Board.png"
+            alt="Demonstration of the light-weight ToF Sensor" />
+        </div>
+        <p>
+          </br>
+          Light-weight ToF sensors like VL53L5CX are designed to be low-cost, small, and low-energy, which have been
+          massively
+          deployed on mobile devices for the purposes like autofocus, obstacle detection, etc.
+          Due to the light-weight electronic design, the depth measured by these sensors has more uncertainty
+          (i.e., in a distribution instead of single depth value) and low spatial resolution (e.g., &#8804; 10×10), and
+          thus cannot support applications like 3D reconstruction or SLAM, that require high-fidelity depth.
+        </p>
+        <br />
+        <br />
+        <div class="has-text-centered">
+          <img style="width: 95%;" src="./media/principle.png"
+            alt="Demonstration of the light-weight ToF Sensor mechanism" />
+        </div>
+        <p>
+          </br>
+          Let's use the VL53L5CX as an example to explain the sensing principle of the light-weight ToF sensor.
+          For conventional ToF sensors, the output is typically in a resolution higher than 10 thousand pixels
+          and measures the per-pixel distance along the ray from the optical center to the observed surfaces.
+          In contrast, VL53L5CX (denoted as L5) provides <strong>multiple depth distributions</strong> with an extremely
+          low resolution of 8 × 8 zones,
+          covering 63&#176; diagonal FoV in total. The distribution is originally measured by counting the number of
+          photons returned in each discretized range of time, and then fitted with a Gaussian distribution
+          in order to reduce the broadband load and energy consumption since only mean and variance
+          needs to be transmitted.
+        </p>
       </div>
-      <p>
+    </div>
+    <br />
+  </section>
+
+
+  <section class="section">
+    <hr />
+    <div class="container is-max-desktop">
+      <div class="content has-text-justified">
+        <h2 class="title is-3 has-text-centered">
+          <p>Tof sensor application</p>
+        </h2>
+        <div class="has-text-centered">
+          <img style="width: 80%;" src="./media/VL53L5CXApplication.png"
+            alt="Demonstration of light-weight ToF Sensor Applications" />
+        </div>
+        <p>
         <ul>
-        </br>
-          <li><strong>Scene recognition</strong>: Multi-zone and multi-object detection enable 3D mapping of environments and obstacle detection for robotics.</li>
-          <li><strong>Wide FoV and multi-zone scanning for content management</strong> (truck loading, tanks, waste containers).</li>
+          </br>
+          <li><strong>Scene recognition</strong>: Multi-zone and multi-object detection enable 3D mapping of
+            environments and obstacle detection for robotics.</li>
+          <li><strong>Wide FoV and multi-zone scanning for content management</strong> (truck loading, tanks, waste
+            containers).</li>
           <li><strong>Gesture recognition</strong>.</li>
           <li><strong>Liquid level control</strong>.</li>
           <li><strong>Trapezoidal distortion correction for video projectors</strong>.</li>
-          <li><strong>Laser-assisted autofocus (LAF)</strong>: Enhances the speed and reliability of the camera's autofocus system, especially in low light or low contrast conditions.</li>
-          <li><strong>Augmented/Virtual Reality (AR/VR) enhancement</strong>: Dual-camera stereoscopy and 3D depth assistance through multi-zone distance measurement.</li>
+          <li><strong>Laser-assisted autofocus (LAF)</strong>: Enhances the speed and reliability of the camera's
+            autofocus system, especially in low light or low contrast conditions.</li>
+          <li><strong>Augmented/Virtual Reality (AR/VR) enhancement</strong>: Dual-camera stereoscopy and 3D depth
+            assistance through multi-zone distance measurement.</li>
           <li><strong>Smart buildings and lighting</strong> (user detection for device activation).</li>
           <li><strong>IoT</strong> (user and object detection).</li>
           <li><strong>Video focus tracking</strong>: 60 Hz detection optimizes the continuous focus algorithm.</li>
         </ul>
-      </p>
-    </div>
-  </div>
-  <br/>
-</section>
-
-
-
-<section class="section">
-  <hr/>
-  <div class="container is-max-desktop">
-    <div class="content has-text-justified">
-      <h2 class="title is-3 has-text-centered"><p>Resut</p></h2>
-      <div class="has-text-centered">
-        <img style="width: 50%;" src="./media/jar.jpg"
-             alt="Demonstration of light-weight ToF Sensor result sample"/>
+        </p>
       </div>
-      <p>
-      </br>
-      </br>
-          The results demonstrate how an affordable sensor (2 to 4 $) can still offer high performance 
-          in terms of accuracy and reliability in collecting three-dimensional information. 
-          I risultati ottenuti dimostrano che per molte esigenze come prevenzione delle collisioni e
-          rilevazione degli ostacoli non è necessario utilizzare costosi sensori lidar e si può fare
-          affidamento sul potenziale di questi sensori poco costosi e a basso consumo.</br>
-      </p>
     </div>
-  </div>
-  <br/>
-</section>
+    <br />
+  </section>
 
 
-<section class="section" id="BibTeX">
-  <hr/>
-  <div class="container content is-max-desktop">
-    <h2 class="title">BibTeX</h2>
-    <pre style="padding: 1.25em 1.5em">
+
+  <section class="section">
+    <hr />
+    <div class="container is-max-desktop">
+      <div class="content has-text-justified">
+        <h2 class="title is-3 has-text-centered">
+          <p>Resut</p>
+        </h2>
+        <div class="has-text-centered" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+          <img style="width: 100%; border-radius: 2em;" src="./media/jar.jpg" alt="Demonstration of light-weight ToF Sensor result sample" />
+          <img style="width: 100%; border-radius: 2em;" src="./media/statue.jpg"
+          alt="Demonstration of light-weight ToF Sensor result sample" />
+        </div>
+        <p>
+          </br>
+          </br>
+          The results demonstrate how an affordable sensor (2 to 4 $) can still offer high performance
+          in terms of accuracy and reliability in collecting three-dimensional information.
+          The results obtained demonstrate that for many needs, such as collision prevention and obstacle detection, it
+          is not necessary to use expensive LiDAR sensors, and it is possible to rely on the potential of these low-cost
+          and low-power sensors.</br>
+        </p>
+      </div>
+    </div>
+    <br />
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <hr />
+    <div class="container content is-max-desktop">
+      <h2 class="title">BibTeX</h2>
+      <pre style="padding: 1.25em 1.5em">
 <code>@inproceedings{
   title={Development of a 3D measurement system, based on microcontroller and ToF sensor and its integration in domotics},
   author={Arash Alghasi},
@@ -282,26 +312,27 @@
   year={2025}
 }</code>
 </pre>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      The website template is borrowed from <a href="https://hypernerf.github.io/" target="_blank">HyperNeRF</a>.
     </div>
-  </div>
-</footer>
+  </section>
 
-<script>
-  MathJax = {
-    tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-  };
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        The website template is borrowed from <a href="https://hypernerf.github.io/" target="_blank">HyperNeRF</a>.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+    };
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 
-<script type="text/javascript" src="./static/slick/slick.min.js"></script>
+  <script type="text/javascript" src="./static/slick/slick.min.js"></script>
 </body>
+
 </html>
