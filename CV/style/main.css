@@ -221,6 +221,11 @@ nav.openMenu {
 .hero .subhead {
   color: var(--text-color-subhead);
 }
+.hero #thesisId {
+  color: var(--text-color-balck);
+  text-decoration: none;
+  font-weight: 700;
+}
 .hero .hero-img {
   margin-top: 3em;
 }
